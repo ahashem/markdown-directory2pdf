@@ -17,4 +17,4 @@ $ yarn
 $ npm run md2pdf -- --directory="book_name"
 ```
 
-#### 4. generated book should be in `./_books/book_name`.
+#### 4. generated book should be in `./_books/book_name.pdf`.
