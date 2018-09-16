@@ -1,0 +1,25 @@
+{
+  "name": "markdown-directory2pdf",
+  "version": "1.0.0",
+  "description": "Convert markdown files in a directory or subdirectories to a PDF file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahashem/markdown-directory2pdf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahashem/markdown-directory2pdf/issues"
+  },
+  "homepage": "https://github.com/ahashem/markdown-directory2pdf#readme",
+  "dependencies": {
+    "log-util": "1.2.0",
+    "markdown-pdf": "9.0.0",
+    "node-dir": "0.1.17"
+  }
+}
