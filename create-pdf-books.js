@@ -1,6 +1,10 @@
+const argv = require('yargs').argv;
 const logger = require('log-util');
 const dir = require('node-dir');
 const mdPDF = require('markdown-pdf');
+
+const directory = argv.directory || argv.d;
+const DIR = directory || __dirname;
 
 const excludedDirs = ['node_modules', '_books', '.git'];
 const fileExtensionRegEx = /.md$/;
@@ -9,7 +13,7 @@ const fileExtensionRegEx = /.md$/;
  * Read all files in the main directory matching the fileExtension and excluding some directories.
  * in the last callback; Array of file paths can be used.
  */
-dir.readFiles(__dirname, {
+dir.readFiles(DIR, {
         match: fileExtensionRegEx,
         excludeDir: excludedDirs,
     }, (err, content, next) => {
@@ -19,10 +23,10 @@ dir.readFiles(__dirname, {
     (err, files) => {
         if (err) throw err;
         // read all files
-        logger.info(`finished reading files in directory ${__dirname}: `, files);
+        logger.info(`finished reading files in directory ${DIR}: `, files);
 
         // convert files to PDF and save in the directory name!
-        const dirName = __dirname.split('/');
+        const dirName = DIR.split('/');
         convertFilesToPDF(files, `./_books/${dirName[dirName.length-1]}.pdf`)
     }
 );
