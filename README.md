@@ -1,4 +1,7 @@
 # markdown-directory2pdf
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/ahashem/markdown-directory2pdf.svg)](https://greenkeeper.io/)
+
 Convert markdown files in a directory or subdirectories into a single PDF file.
 
 ## Usage
